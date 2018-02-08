@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   justify-content: space-between;
@@ -83,6 +84,62 @@
     &:hover {
       transform: scale(1);
       opacity: 1;
+    }
+  }
+}
+
+.steps {
+  padding: 8rem 0;
+  background: lighten($color: $mid-grey, $amount: 20);
+  &__column {
+    margin-top: 3rem;
+  }
+  &__column:first-child {
+    text-align: right;
+    padding-right: 3%;
+  }
+  &__column:last-child {
+    padding-left: 3%;
+  }
+
+  &__app-screen {
+    width: 40%;
+  }
+
+  & .btn--app img {
+    height: 5rem;
+    width: auto;
+  }
+
+  &__step {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+
+    & > div {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--mid-orange);
+      border-radius: 50%;
+      transition: all 0.2s;
+      transform: scale(1.2);
+
+      &:hover {
+        background: var(--orange);
+        color: var(--color-light);
+        transform: scale(1.8);
+      }
+    }
+
+    & p {
+      text-align: left;
+    }
+
+    & > * {
+      margin-bottom: 5rem;
     }
   }
 }
