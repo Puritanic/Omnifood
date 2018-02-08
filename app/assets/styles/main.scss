@@ -4,7 +4,7 @@
 @import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendor/normalize';
+@import 'vendor/normalize', 'vendor/ionicons';
 
 // 3. Base stuff
 @import 'base/base',
@@ -14,7 +14,7 @@
   'base/animations';
 
 // 4. Layout-related sections
-@import 'layout/grids', 'layout/header', 'layout/navigation';
+@import 'layout/grids', 'layout/navigation';
 
 // 5. Components
 @import 'components/btn';
