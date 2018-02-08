@@ -47,3 +47,42 @@
     }
   }
 }
+
+.meals {
+  display: flex;
+  // height: 100vh;
+  width: 100%;
+
+  &__showcase {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background: #000;
+
+    li {
+      display: block;
+      width: 25%;
+      overflow: hidden;
+    }
+    figure {
+      margin: 0;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &__meal-photo {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+
+    &:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

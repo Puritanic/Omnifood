@@ -3301,6 +3301,42 @@ body {
       margin-bottom: 37.44px;
       margin-bottom: 1.8rem;
       color: #cf6d17; }
+.meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+.meals__showcase {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style: none;
+    background: #000; }
+.meals__showcase li {
+      display: block;
+      width: 25%;
+      overflow: hidden; }
+.meals__showcase figure {
+      margin: 0;
+      width: 100%; }
+.meals__showcase img {
+      width: 100%; }
+.meals__meal-photo {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: opacity 1.5s ease-out, -webkit-transform 1.5s ease-out;
+    transition: opacity 1.5s ease-out, -webkit-transform 1.5s ease-out;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out, -webkit-transform 1.5s ease-out; }
+.meals__meal-photo:hover {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1; }
 @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
