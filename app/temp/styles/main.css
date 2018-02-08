@@ -2768,6 +2768,57 @@ body {
 /**
  * Basic typography styles
  */
+.heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4.16px;
+  letter-spacing: 0.2rem; }
+.heading--primary {
+    font-size: 87.36px;
+    font-size: 4.2rem;
+    line-height: 130%;
+    word-spacing: 6.24px;
+    word-spacing: 0.3rem;
+    margin: 0;
+    color: #fff; }
+.heading--secondary {
+    font-size: 74.88px;
+    font-size: 3.6rem;
+    word-spacing: 6.24px;
+    word-spacing: 0.3rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+.heading--secondary:after {
+      content: ' ';
+      height: 1px;
+      width: 312px;
+      width: 15rem;
+      margin-top: 62.4px;
+      margin-top: 3rem;
+      background: #e67e22; }
+.heading--tertiary {
+    font-size: 41.6px;
+    font-size: 2rem;
+    text-align: center; }
+.paragraph {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  font-size: 41.6px;
+  font-size: 2rem; }
 /**
  * Clear inner floats
  */
@@ -3231,18 +3282,25 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-.hero__text-box h1 {
-      font-size: 87.36px;
-      font-size: 4.2rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 4.16px;
-      letter-spacing: 0.2rem;
-      line-height: 130%;
-      word-spacing: 6.24px;
-      word-spacing: 0.3rem;
-      margin: 0;
-      color: #fff; }
+.features {
+  padding: 166.4px 0;
+  padding: 8rem 0; }
+.features__column {
+    padding: 20.8px;
+    padding: 1rem; }
+.features__column__p {
+      line-height: 145%;
+      font-size: 35.36px;
+      font-size: 1.7rem;
+      text-align: justify; }
+.features__column__i {
+      font-size: 208px;
+      font-size: 10rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 37.44px;
+      margin-bottom: 1.8rem;
+      color: #cf6d17; }
 @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }

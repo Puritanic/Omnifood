@@ -1,3 +1,48 @@
 /**
  * Basic typography styles
  */
+
+.heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  &--primary {
+    font-size: 4.2rem;
+    line-height: 130%;
+    word-spacing: 0.3rem;
+    margin: 0;
+    color: var(--color-light);
+  }
+
+  &--secondary {
+    font-size: 3.6rem;
+    word-spacing: 0.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: ' ';
+      height: 1px;
+      width: 15rem;
+      margin-top: 3rem;
+      background: var(--orange);
+    }
+  }
+
+  &--tertiary {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.paragraph {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  font-size: 2rem;
+}
