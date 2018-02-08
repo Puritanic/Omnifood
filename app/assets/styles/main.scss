@@ -14,9 +14,10 @@
   'base/animations';
 
 // 4. Layout-related sections
-@import 'layout/grids', 'layout/header';
+@import 'layout/grids', 'layout/header', 'layout/navigation';
 
 // 5. Components
+@import 'components/btn';
 
 // 6. Page-specific styles
 @import 'pages/home';
