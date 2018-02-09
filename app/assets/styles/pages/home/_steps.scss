@@ -1,0 +1,45 @@
+.steps {
+  padding: 8rem 0;
+  background: lighten($color: $mid-grey, $amount: 20);
+
+  &__app-screen {
+    width: 40%;
+  }
+
+  & .btn--app img {
+    height: 5rem;
+    width: auto;
+  }
+
+  &__step {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+
+    & > div {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--mid-orange);
+      border-radius: 50%;
+      transition: all 0.2s;
+      transform: scale(1.2);
+
+      &:hover {
+        background: var(--orange);
+        color: var(--color-light);
+        transform: scale(1.8);
+      }
+    }
+
+    & p {
+      text-align: left;
+    }
+
+    & > * {
+      margin-bottom: 5rem;
+    }
+  }
+}

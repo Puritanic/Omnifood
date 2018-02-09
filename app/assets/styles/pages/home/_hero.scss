@@ -1,0 +1,24 @@
+.hero {
+  background-image: linear-gradient(rgba($black, 0.7), rgba($black, 0.7)),
+    resolve('hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  &__text-box {
+    position: absolute;
+    width: 110.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-end;
+  }
+}

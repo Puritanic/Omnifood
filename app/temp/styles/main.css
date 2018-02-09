@@ -3547,8 +3547,8 @@ body {
       border-radius: 50%;
       vertical-align: middle; }
 .plan {
-  padding: 166.4px;
-  padding: 8rem;
+  padding: 208px 0;
+  padding: 10rem 0;
   background: #cccccc; }
 .plan .row:nth-child(2) {
     margin-top: 104px;
