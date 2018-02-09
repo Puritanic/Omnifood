@@ -1,0 +1,40 @@
+.form {
+  padding: 8rem 0 10rem 0;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  // text-align: center;
+
+  & > .row:nth-of-type(2) {
+    margin-top: 6rem;
+  }
+
+  label {
+    vertical-align: middle;
+    font-size: 1.9rem;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 3px;
+    font-size: inherit;
+    font-family: inherit;
+    border: 1px solid var(--mid-orange);
+  }
+
+  input[type='checkbox'] {
+    margin: 1rem 0.5rem 1rem 0;
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  *:focus {
+    outline: none;
+  }
+}

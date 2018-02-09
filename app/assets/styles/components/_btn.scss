@@ -39,3 +39,23 @@
     margin-right: 1rem;
   }
 }
+
+input[type='submit'] {
+  cursor: pointer;
+  border: none;
+  display: block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  color: var(--color-light);
+  background: var(--mid-orange);
+
+  &:hover,
+  &:active {
+    background: var(--orange);
+    transform: scale(1.03);
+    outline: none;
+  }
+}
