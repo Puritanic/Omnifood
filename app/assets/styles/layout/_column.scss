@@ -1,0 +1,11 @@
+.column {
+  margin-top: 3rem;
+
+  &:first-child {
+    text-align: right;
+    padding-right: 3%;
+  }
+  &:last-child {
+    padding-left: 3%;
+  }
+}
