@@ -17,21 +17,46 @@ footer {
     }
     .footer__social {
       font-size: 2.5rem;
+
+      & a .ion-social-facebook,
+      & a .ion-social-twitter,
+      & a .ion-social-instagram,
+      & a .ion-social-googleplus {
+        transition: color 0.3s;
+      }
+      & a:hover .ion-social-facebook {
+        color: #3b5998;
+      }
+      & a:hover .ion-social-twitter {
+        color: #55acee;
+      }
+      & a:hover .ion-social-instagram {
+        color: darken($color: #dd4b39, $amount: 10);
+      }
+      & a:hover .ion-social-googleplus {
+        color: darken($color: #e95950, $amount: 20);
+      }
     }
   }
 
   & .row:nth-of-type(2) {
     text-align: center;
     padding: 2rem;
+
+    p {
+      cursor: default;
+    }
   }
 
-  a {
+  a:link,
+  a:visited {
     text-decoration: none;
     display: block;
     color: $light-grey;
     transition: all 0.2s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: $dark-grey;
     }
   }

@@ -51,9 +51,9 @@
 /*
 Media query manager mixin
 
-0-600px:    Phone
-600-900px:  Tablet-portrait mode
-900-1200px:  Tablet-landscape mode
+0-600px:    Phone 480
+600-900px:  Tablet-portrait mode 767
+900-1200px:  Tablet-landscape mode 1020
 1200-1800px:  Desktop - this is where all current styles apply
 1800px:  xlDesktop
 
@@ -66,12 +66,21 @@ Media query manager mixin
       @content;
     }
   }
-  @if $breakpoint == tab-port {
-    // 900px
-    @media only screen and (max-width: 56.25em) {
+
+  @if $breakpoint == phone {
+    // 600px
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
+
+  @if $breakpoint == tab-port-s {
+    // 1020px
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-land {
     // 1200px
     @media only screen and (max-width: 75em) {

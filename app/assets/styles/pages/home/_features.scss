@@ -1,8 +1,24 @@
 .features {
   padding: 8rem 0;
 
+  @include respond(tab-port-s) {
+    & .row:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
   &__column {
     padding: 1rem;
+
+    @include respond(tab-port-s) {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &__p {
       line-height: 145%;

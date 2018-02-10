@@ -20,7 +20,8 @@ gulp.task('watch', () => {
       baseDir: 'app',
       index: 'index.html'
     },
-    port: 3000
+    port: 3000,
+    browser: 'chromium'
   });
 
   $.watch('./app/index.html', () => {
@@ -36,7 +37,8 @@ gulp.task('watch', () => {
   });
 });
 
-gulp.task('cssInject', ['styles'], () => gulp.src('./app/temp/styles/main.css').pipe(browserSync.stream()));
+gulp.task('cssInject', ['styles'], () =>
+  gulp.src('./app/temp/styles/main.css').pipe(browserSync.stream()));
 
 gulp.task('scriptsRefresh', ['scripts'], () => {
   browserSync.reload();

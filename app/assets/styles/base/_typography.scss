@@ -6,6 +6,7 @@
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  line-height: 145%;
 
   &--primary {
     font-size: 4.2rem;
@@ -13,6 +14,10 @@
     word-spacing: 0.3rem;
     margin: 0;
     color: var(--color-light);
+
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+    }
   }
 
   &--secondary {
