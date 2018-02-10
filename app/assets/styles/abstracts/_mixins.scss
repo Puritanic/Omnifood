@@ -67,16 +67,16 @@ Media query manager mixin
     }
   }
 
-  @if $breakpoint == phone {
-    // 600px
-    @media only screen and (max-width: 37.5em) {
+  @if $breakpoint == tab-port-s {
+    // 800px
+    @media only screen and (max-width: 50em) {
       @content;
     }
   }
 
-  @if $breakpoint == tab-port-s {
+  @if $breakpoint == tab-port {
     // 1020px
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 65em) {
       @content;
     }
   }
