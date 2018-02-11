@@ -8,6 +8,22 @@ footer {
     padding: 1.5rem;
     padding-bottom: 0;
 
+    @include respond(tab-port-s) {
+      flex-flow: column;
+
+      & > * {
+        width: 100%;
+      }
+
+      .footer__nav {
+        font-size: 1.5rem;
+        width: 90%;
+        & a {
+          flex: 0 0 25%;
+        }
+      }
+    }
+
     .footer__nav,
     .footer__social {
       display: flex;
@@ -15,8 +31,14 @@ footer {
       font-size: 2rem;
       list-style: none;
     }
+
     .footer__social {
       font-size: 2.5rem;
+
+      @include respond(tab-port-s) {
+        margin: 1.5rem 0;
+        margin-bottom: 0;
+      }
 
       & a .ion-social-facebook,
       & a .ion-social-twitter,

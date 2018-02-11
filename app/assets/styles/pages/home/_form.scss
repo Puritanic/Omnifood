@@ -3,7 +3,15 @@
   width: 50%;
   margin: 0 auto;
   font-size: 1.5rem;
-  // text-align: center;
+
+  @include respond(tab-port-s) {
+    padding: 3rem;
+    width: 100%;
+
+    & .row {
+      margin: 0;
+    }
+  }
 
   & > .row:nth-of-type(2) {
     margin-top: 6rem;
@@ -24,6 +32,10 @@
     font-size: inherit;
     font-family: inherit;
     border: 1px solid var(--mid-orange);
+
+    @include respond(phone) {
+      margin: 1rem 0;
+    }
   }
 
   input[type='checkbox'] {
