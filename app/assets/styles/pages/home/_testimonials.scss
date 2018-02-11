@@ -12,15 +12,29 @@
 
   color: $light-grey;
   padding: 8rem 0;
-  height: 85vh;
+  // height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include respond(tab-port-s) {
+    padding: 5rem;
+  }
 
   & .row:nth-child(2) {
     margin-top: 5rem;
     display: flex;
     align-items: baseline;
+
+    @include respond(tab-port-s) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      & > * {
+        width: 100%;
+      }
+    }
   }
 
   & blockquote {
@@ -29,6 +43,10 @@
     line-height: 145%;
     position: relative;
     z-index: 100;
+
+    @include respond(tab-port-s) {
+      font-size: 2rem;
+    }
 
     &::before {
       content: '\201c';
@@ -47,6 +65,12 @@
     font-size: 90%;
     margin-top: 2.5rem;
     display: block;
+
+    @include respond(tab-port-s) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
 
     img {
       height: 5rem;

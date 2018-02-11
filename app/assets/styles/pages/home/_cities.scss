@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+
+  @include respond(tab-port-s) {
+    padding: 4rem 1rem;
+  }
+
   .city__feature {
     padding: 1rem;
     display: flex;
@@ -41,6 +49,33 @@
     width: 100%;
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
+
+    @include respond(tab-port) {
+      & .column {
+        flex: 0 0 48%;
+        margin: 5% 1%;
+      }
+
+      & .city__feature {
+        margin-left: 6rem;
+      }
+    }
+
+    @include respond(tab-port-s) {
+      & .city__feature {
+        margin-left: 1rem;
+      }
+    }
+    @include respond(phone) {
+      & .column {
+        flex: 0 0 98%;
+        margin: 5% 1%;
+
+        align-items: center;
+        margin: 2rem 0 0 0;
+      }
+    }
   }
 
   & .column {
@@ -50,7 +85,6 @@
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
 
     &:not(:last-of-type) {
       margin-right: 1rem;
@@ -63,5 +97,11 @@
     border-radius: 3px;
     margin-bottom: 2rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+
+    @include respond(phone) {
+      width: 80%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
   }
 }

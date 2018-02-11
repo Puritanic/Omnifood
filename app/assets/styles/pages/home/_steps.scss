@@ -72,6 +72,10 @@
 
     & > * {
       margin-bottom: 5rem;
+
+      @include respond(tab-port-s) {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
