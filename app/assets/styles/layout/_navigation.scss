@@ -5,10 +5,10 @@
   padding: 1.5rem 5rem;
 
   &__main {
+    display: flex;
     list-style: none;
 
     @include respond(tab-port-s) {
-      display: flex;
       align-items: flex-end;
       flex-flow: column;
 
@@ -46,9 +46,38 @@
     }
   }
 
-  &__logo {
+  &__logo,
+  &__logo--black {
     height: 10rem;
     width: auto;
     // float: left;
+  }
+
+  &__logo--black {
+    display: none;
+  }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgba(#cf6d17, 0.8);
+  box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.15);
+
+  &.nav {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 5rem;
+  }
+
+  & .nav__logo {
+    display: none;
+  }
+  & .nav__logo--black {
+    display: block;
+    height: 5rem;
+    width: auto;
   }
 }
