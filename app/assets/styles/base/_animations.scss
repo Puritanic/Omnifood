@@ -1,43 +1,16 @@
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
+.js-wp-1,
+.js-wp-2,
+.js-wp-3 {
+  opacity: 0;
+  animation-duration: 1s;
 }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
+.js-wp-1.animated,
+.js-wp-2.animated,
+.js-wp-3.animated {
+  opacity: 1;
 }
 
-@keyframes moveFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
+.js-wp-4 {
+  animation-duration: 1s;
 }

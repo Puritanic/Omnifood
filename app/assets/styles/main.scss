@@ -4,7 +4,7 @@
 @import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendor/normalize', 'vendor/ionicons';
+@import 'vendor/normalize', 'vendor/ionicons', 'vendor/animate';
 
 // 3. Base stuff
 @import 'base/base',

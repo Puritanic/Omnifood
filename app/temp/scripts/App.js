@@ -106,10 +106,12 @@ __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(window.Waypoint);
+var _window = window,
+    Waypoint = _window.Waypoint;
+
 
 (0, _jquery2.default)(function () {
-  var waypoint = new Waypoint({
+  var waypointNav = new Waypoint({
     element: document.getElementById('features'),
     handler: function handler() {
       (0, _jquery2.default)('.nav').toggleClass('fixed');
@@ -132,7 +134,7 @@ console.log(window.Waypoint);
   // Remove links that don't actually link to anything
   .not('[href="#"]').not('[href="#0"]').click(function (event) {
     // On-page links
-    if (window.location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && window.location.hostname == this.hostname) {
+    if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && window.location.hostname === this.hostname) {
       // Figure out element to scroll to
       var target = (0, _jquery2.default)(this.hash);
       target = target.length ? target : (0, _jquery2.default)('[name=' + this.hash.slice(1) + ']');
@@ -156,6 +158,48 @@ console.log(window.Waypoint);
         });
       }
     }
+  });
+
+  var waypointFeatures = new Waypoint({
+    element: document.getElementsByClassName('js-wp-1')[0],
+    handler: function handler() {
+      (0, _jquery2.default)('.js-wp-1').addClass('animated fadeIn');
+    },
+
+    offset: '70%'
+  });
+
+  var waypointSteps = new Waypoint({
+    element: document.getElementsByClassName('js-wp-2')[0],
+    handler: function handler() {
+      (0, _jquery2.default)('.js-wp-2').addClass('animated fadeInUp');
+    },
+
+    offset: '60%'
+  });
+
+  var waypointCities = new Waypoint({
+    element: document.getElementsByClassName('js-wp-3')[0],
+    handler: function handler() {
+      (0, _jquery2.default)('.js-wp-3').addClass('animated fadeIn');
+    },
+
+    offset: '60%'
+  });
+
+  var waypointPlans = new Waypoint({
+    element: document.getElementsByClassName('js-wp-4')[0],
+    handler: function handler() {
+      (0, _jquery2.default)('.js-wp-4').addClass('animated pulse');
+    },
+
+    offset: '50%'
+  });
+
+  (0, _jquery2.default)('.nav__mobile-icon').on('click', function (e) {
+    e.preventDefault();
+    (0, _jquery2.default)('.nav__mobile-icon i').toggleClass('ion-navicon-round ion-close-round');
+    (0, _jquery2.default)('.nav__main').toggleClass('nav__mobile');
   });
 });
 

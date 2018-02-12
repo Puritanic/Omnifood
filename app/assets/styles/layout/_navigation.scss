@@ -7,6 +7,7 @@
   &__main {
     display: flex;
     list-style: none;
+    transition: all 2s;
 
     @include respond(tab-port-s) {
       align-items: flex-end;
@@ -44,6 +45,16 @@
     a:active {
       border-bottom: 2px solid var(--orange);
     }
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &.nav__mobile {
+      display: block;
+      display: flex;
+      align-items: flex-end;
+    }
   }
 
   &__logo,
@@ -56,6 +67,21 @@
   &__logo--black {
     display: none;
   }
+
+  &__mobile-icon:link,
+  &__mobile-icon:visited {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      font-size: 2.5rem;
+      color: lighten($color: #cf6d17, $amount: 20);
+      align-self: flex-start;
+      position: absolute;
+      top: 1.5rem;
+      right: 1rem;
+    }
+  }
 }
 
 .fixed {
@@ -65,11 +91,37 @@
   left: 0;
   background: rgba(#cf6d17, 0.8);
   box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.15);
+  transition: all 0.2s;
 
   &.nav {
     display: flex;
     align-items: center;
     padding: 0.4rem 5rem;
+
+    & .nav__main {
+      @include respond(phone) {
+        display: none;
+
+        &.nav__mobile {
+          flex-direction: column;
+          align-items: flex-end;
+          display: flex;
+          margin-left: auto;
+        }
+      }
+    }
+
+    & .nav__mobile-icon:link,
+    & .nav__mobile-icon:visited {
+      color: darken($color: #cf6d17, $amount: 40);
+    }
+  }
+
+  @include respond(tab-port-s) {
+    &.nav .nav__main {
+      flex-direction: row;
+      font-size: 2rem;
+    }
   }
 
   & .nav__logo {
